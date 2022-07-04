@@ -2,17 +2,8 @@
   <div class="students">
     <h2>生徒一覧</h2>
     <ul>
-      <!-- <li v-for="student in students" :key="student">
-        <NuxtLink to="/students/(student.idを代入したいが方法が浮かばない)">{{student.name}}</NuxtLink>
-      </li> -->
-      <li>
-        <NuxtLink to="/students/qnfungqxllc3m1ak">生徒A</NuxtLink>
-      </li>
-      <li>
-        <NuxtLink to="/students/7j9cumkgsq6l264c">生徒B</NuxtLink>
-      </li>
-      <li>
-        <NuxtLink to="/students/eo34bhey9m0d92ou">生徒C</NuxtLink>
+      <li v-for="student in students" :key="student.id">
+        <NuxtLink :to="'students/'+ student.id">{{student.name}}</NuxtLink>
       </li>
     </ul>
     <NuxtLink to="/">戻る</NuxtLink>
